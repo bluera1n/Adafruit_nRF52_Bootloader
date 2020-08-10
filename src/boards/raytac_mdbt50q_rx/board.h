@@ -43,15 +43,6 @@
 #define BUTTON_2                _PINNUM(0, 10)
 #define BUTTON_PULL             NRF_GPIO_PIN_PULLUP
 
-/*------------------------------------------------------------------*/
-/* UART (only used by nRF52832) (only used by nRF52832)
- *------------------------------------------------------------------*/
-#define RX_PIN_NUMBER           8
-#define TX_PIN_NUMBER           6
-#define CTS_PIN_NUMBER          0
-#define RTS_PIN_NUMBER          0
-#define HWFC                    false
-
 //--------------------------------------------------------------------+
 // BLE OTA
 //--------------------------------------------------------------------+
@@ -61,9 +52,11 @@
 //--------------------------------------------------------------------+
 // USB
 //--------------------------------------------------------------------+
-#define USB_DESC_VID            0x239A
-#define USB_DESC_UF2_PID        0x0029
-#define USB_DESC_CDC_ONLY_PID   0x002A
+
+// Shared VID/PID with Feather nRF52840, will be disabled for building in the future
+#define USB_DESC_VID           0x239A
+#define USB_DESC_UF2_PID       0x0029
+#define USB_DESC_CDC_ONLY_PID  0x0029
 
 //------------- UF2 -------------//
 #define UF2_PRODUCT_NAME        "Raytac MDBT50Q-RX"
